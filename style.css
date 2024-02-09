@@ -4,28 +4,72 @@
     list-style:none;
     text-decoration: none;
 }
+
+--white {
+    color:white;
+}
+body{
+    background-color: whitesmoke;
+}
 .list-app{
     display:flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid black;
-    border-radius: 10px;
+    border:2px solid rgb(192, 171, 171);
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
     margin:2rem;
-    min-height: 50vh;
+    border-bottom: none;
+    background-color: white;
 }
 
 .insert-c{
     min-width: 100%;
     display:flex;
     justify-content: center;
-    border:1px solid green;
+    border-top:1px solid;
 }
 .inpt{
-    border-radius:1rem;
-    height:2rem;
-    width: 80%;
+    border:none;
+    padding:1rem;
+    width: 100%;
+    border-bottom: 1px solid black;;
 }
 
 .test {
-    background-color: gold;
+    background-color: rgb(255, 255, 255);
+}
+
+/* todo object stuff */
+.font{
+    font-size: 18px;
+}
+.list-c{
+    min-width: 100%;
+}
+
+.todo-c{
+    background-color: rgb(255, 255, 255);
+    padding-top:.75rem;
+    padding-bottom: .75rem;
+    border:1px solid rgba(0, 0, 0, 0.362);
+    display: flex;
+    justify-content: flex-start;
+    gap:2rem;
+}
+
+.checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border:2px solid black;
+    margin-left:10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.uncheck{
+    background-color: white;
+}
+.checked{
+    background-color: black;
 }
