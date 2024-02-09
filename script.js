@@ -12,3 +12,4 @@ inputVal.addEventListener("keyup",(e)=>{
         inputVal.value = "";
     }
 } )
+

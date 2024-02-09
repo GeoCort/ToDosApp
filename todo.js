@@ -1,7 +1,5 @@
 export default class Todo{
-    constructor(){
-        console.log("working")
-    }
+
     constructor(parent, input){
         this.parent = parent;
         ischecked = false;
