@@ -11,35 +11,26 @@ export default class Todo{
     generateTodo(){
         this.parent.appendChild(this.todoContainer());
     }
-    // Helper function for generating DOM information 
+   // Helper function for generating DOM information 
     todoContainer(){
-        let div = document.createElement("div");
-        let circle =  document.createElement("div");
-        circle.classList.add("checkbox")
-        circle.classList.add("uncheck")
-        div.addEventListener("click", ()=>{
-            this.check(circle);
-            console.log("clicked;")
+        let li = document.createElement("li")
+        let div = document.createElement("div")
+        let circle =  document.createElement("input")
+        circle.setAttribute("type","checkbox")
+        circle.setAttribute("name","todo")
+        let label =  document.createElement("label")
+        label.innerText =`${this.input}`
+        label.setAttribute("name","todo")
+        label.addEventListener("click",()=>{
+            circle.checked = (circle.checked == true? false:true)            
         })
-        let title = document.createElement("h3");
-        div.classList.add("todo-c");
-        title.innerText= `${this.input}`;
-        div.appendChild(circle);
-        div.appendChild(title);
+        div.appendChild(circle)
+        div.appendChild(label)
+        li.appendChild(div)
+        
         return div;
     }
-    // Creates the click function for each todo object
-    check(checkbox){
-    if(this.ischecked == false){
-        checkbox.classList.remove("uncheck");
-        checkbox.classList.add("checked")
-        this.ischecked = true;
-    }else{
-        checkbox.classList.remove("checked")
-        checkbox.classList.add("uncheck")
-        this.ischecked = false;
-    } 
-    }
+
     
 };
 

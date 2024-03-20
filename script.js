@@ -1,18 +1,20 @@
 import Todo from "./todo.js";
-let listContainer = document.getElementById("list")
-const inputVal = document.getElementById("list-val");
-inputVal.classList.add("test");
+const mainTitle = document.getElementById("main-title")
+const addTodoElement =  document.getElementById("list-val")
+const listContainer = document.getElementById("list")
 
-let defaultList = [] // intially empty
 
-inputVal.addEventListener("keyup",(e)=>{
-    if(inputVal.value == "") return;
+
+
+
+// event listener for task
+addTodoElement.addEventListener("keypress", (e)=>{
     if(e.key == "Enter"){
-        console.log("working")
-        let todo = new Todo(listContainer, inputVal.value)
-        console.log("object creation successful" , todo)
-        defaultList.push(todo);
-        inputVal.value = "";
+        const value = addTodoElement.value
+        let todo = new Todo(listContainer,value)
+    }else{
+        return;
     }
-} )
+    addTodoElement.value = ""
+})
 
