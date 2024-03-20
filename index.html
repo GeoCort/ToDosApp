@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <title>Todos App</title>
 </head>
 <body>
-    <main>
-        <div class="list-app" id="main-section">
-            <h1 id="main-title">Insert Todo List Name</h1>
-        <div class="insert-c" id="main-container">
-            <input type="text" placeholder="Add a new task" class="input-form" id="list-val" >
-        </div>
-        <div class="list-c" id="list">
-        </div>
-    
-    
-    </div>
+    <main class="app">
+        <section class="app-container">
+            <div class="list-app" id="main-section">
+                <h1 id="main-title">Insert Todo List Name</h1>
+            <div class="insert-c flex" id="main-container">
+                <input type="text" placeholder="Add a new task" class="input-form" id="list-val" >
+            </div>
+            <div class="list-c" id="list">
+            </div>
+        
+        
+            </div>
+        </section>
     </main>
     <script src="./script.js" type="module"></script>
 </body>
